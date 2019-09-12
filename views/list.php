@@ -1,9 +1,10 @@
 <?php $this->load->view('defaults/header');?>
-	<div class="page-header">
-		<h1>Recent Pastes </h1>
-	</div>
-
-		<?php 
+<div class="row">
+    <div class="container">
+        <div class="page-header">
+            <h1>Recent Pastes </h1>
+        </div>
+		<?php
 		if(!empty($pastes)){ ?>
 			<table class="recent table table-striped table-bordered">
 				<thead>
@@ -18,7 +19,7 @@
 				<tbody>
 		<?php	foreach($pastes as $paste) {
 
-		?>	
+		?>
 
 		<tr>
 			<td class="first"><a href="<?php echo site_url("view/".$paste['pid']); ?>"><?php echo $paste['title']; ?></a></td>
@@ -30,10 +31,14 @@
 
 		<?php }?>
 				</tbody>
-			</table> 
+			</table>
 		<?php } else { ?>
 			<p>There have been no pastes :(</p>
-		<?php }?>
-<?php echo $pages; ?>
-<div class="spacer"></div>
+        <?php
+        }
+        echo $pages;
+        ?>
+        <div class="spacer"></div>
+    </div>
+</div>
 <?php $this->load->view('defaults/footer');?>
