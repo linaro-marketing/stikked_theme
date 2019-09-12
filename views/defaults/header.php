@@ -42,40 +42,37 @@ $this->carabiner->display('css');
 	</script>
 	</head>
 
-<body class="contentpage fullwidth">
+<body id="wrapper">
 
 <nav class="navbar navbar-fixed-top">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-        <a class="navbar-left" href="https://www.linaro.org">
-            <img src="https://www.linaro.org/assets/images/content/Linaro-Logo.svg">
-        </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse  navbar-right">
-            <ul class="nav navbar-nav">
-              <?php $l = $this->uri->segment(1)?>
-                <li><a <?php if($l == ""){ echo 'class="active"'; }?> href="<?php echo base_url()?>" title="Create A New Paste">Create</a></li>
-                <?php if(!$this->config->item('private_only')){ ?>
-                <li><a <?php if($l == "lists" || $l == "view" and $this->uri->segment(2) != "options"){ echo 'class="active"'; }?> href="<?php echo site_url('lists'); ?>" title="Recent Pastes">Recent</a></li>
-                <!--<li><a <?php if($l == "trends"){ echo 'class="active"'; }?> href="<?php echo site_url('trends'); ?>" title="Trending Pastes">Trending</a></li>-->
-                <?php } ?>
-                <li><a  <?php if($l == "api"){ echo 'class="active"'; }?> href="<?php echo site_url('api'); ?>" title="API">API</a></li>
-            </ul>
-          </div>
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    <a class="navbar-left" href="https://www.linaro.org">
+        <img src="https://www.linaro.org/assets/images/content/Linaro-Logo.svg">
+    </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <?php $l = $this->uri->segment(1)?>
+            <li><a <?php if($l == ""){ echo 'class="active"'; }?> href="<?php echo base_url()?>" title="Create A New Paste">Create</a></li>
+            <?php if(!$this->config->item('private_only')){ ?>
+            <li><a <?php if($l == "lists" || $l == "view" and $this->uri->segment(2) != "options"){ echo 'class="active"'; }?> href="<?php echo site_url('lists'); ?>" title="Recent Pastes">Recent</a></li>
+            <!--<li><a <?php if($l == "trends"){ echo 'class="active"'; }?> href="<?php echo site_url('trends'); ?>" title="Trending Pastes">Trending</a></li>-->
+            <?php } ?>
+            <li><a  <?php if($l == "api"){ echo 'class="active"'; }?> href="<?php echo site_url('api'); ?>" title="API">API</a></li>
+        </ul>
+    </div>
 </nav>
-<div class="container-fluid" id="wrapper">
-    <div class="row" id="wrapper_inner" >
-	 <!-- <div id="content" class="repeat pagecontent"> -->
-		<div class="container">
-				<?php if(isset($status_message)){?>
-				<div class="message success change">
-					<div class="container">
-						<?php echo $status_message; ?>
-					</div>
-				</div>
-				<?php }?>
+<div class="container-fluid" id="main">
+    <?php if(isset($status_message)){?>
+    <div class="message success change">
+        <div class="container">
+            <?php echo $status_message; ?>
+        </div>
+    </div>
+    <?php }?>
