@@ -1,11 +1,3 @@
-button,
-input,
-select,
-textarea {
-  margin: 0;
-  font-size: 100%;
-  vertical-align: middle;
-}
 
 button,
 input {
@@ -86,7 +78,7 @@ a.logo_link img {
 
 body,
 html {
-	background:#fff !important;
+	background:#1c1c1c !important;
 	margin:0;
 	padding:0;}
 
@@ -166,12 +158,7 @@ html {
 
 /********************* Page Framework : Footer area *********************/
 
-#footer {
-	border-top:3px solid #a1cd41;
-	box-shadow:0 -1px 0 #fff, 0 -2px 0 #a3a3a3;
-	-moz-box-shadow:0 -1px 0 #fff, 0 -2px 0 #a3a3a3;
-	-webkit-box-shadow:0 -1px 0 #fff, 0 -2px 0 #a3a3a3;
-	background:#111 url(../images/footer.png) repeat-x center top; }
+
 
 	#footer_social {
 		padding-top:5px;
@@ -798,107 +785,6 @@ td ol {
 					border-top:1px dotted #444;}
 
 /********************* Content Style : Forms ********************/
-
-.form-group {
-	padding:10px 0 0 10px;}
-
-	.form-group label {
-		display: block;
-		margin-bottom: 5px;
-		color: #444;
-		margin-top:5px;}
-
-	.form-group .field input {
-		display: inline-block;
-		width: 400px;
-		height: 18px;
-		padding: 4px;
-		margin-bottom: 0;
-		font-size: 13px;
-		line-height: 18px;
-		color: #555555;
-		border: 1px solid #ccc;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		border-radius: 3px;
-		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-		-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-		-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-		-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-		-ms-transition: border linear 0.2s, box-shadow linear 0.2s;
-		-o-transition: border linear 0.2s, box-shadow linear 0.2s;
-		transition: border linear 0.2s, box-shadow linear 0.2s;}
-
-	.form-group .field textarea {
-		display: inline-block;
-		width: 400px;
-		height: 150px;
-		padding: 4px;
-		margin-bottom: 0;
-		font-size: 13px;
-		line-height: 18px;
-		color: #555555;
-		border: 1px solid #ccc;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		border-radius: 3px;
-		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-		-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-		-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-		-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-		-ms-transition: border linear 0.2s, box-shadow linear 0.2s;
-		-o-transition: border linear 0.2s, box-shadow linear 0.2s;
-		transition: border linear 0.2s, box-shadow linear 0.2s;}
-
-	.form-group input:focus,
-	.form-group textarea:focus {
-		border-color: rgba(140, 189, 48, 0.8);
-		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(140, 189, 48, 0.6);
-		-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(140, 189, 48, 0.6);
-		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(140, 189, 48, 0.6);
-		outline: 0;
-		outline: thin dotted \9;
-		/* IE6-8 */}
-
-.form-controls {
-	padding-left:10px;}
-
-	.form-controls button {
-		display:inline-block;
-		padding:4px 6px;
-		margin:3px 10px 15px 0;
-		background: rgb(153,196,55); /* Old browsers */
-		background: -moz-linear-gradient(top, rgba(153,196,55,1) 0%, rgba(136,177,37,1) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(153,196,55,1)), color-stop(100%,rgba(136,177,37,1))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, rgba(153,196,55,1) 0%,rgba(136,177,37,1) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, rgba(153,196,55,1) 0%,rgba(136,177,37,1) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top, rgba(153,196,55,1) 0%,rgba(136,177,37,1) 100%); /* IE10+ */
-		background: linear-gradient(top, rgba(153,196,55,1) 0%,rgba(136,177,37,1) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99c437', endColorstr='#88b125',GradientType=0 ); /* IE6-9 */
-		border-width:1px;
-		border-radius:4px;
-		box-shadow :inset 0 1px 0 rgb(236, 255, 140), inset 0 -1px 3px rgb(151, 194, 53), 0 1px 3px #444;
-		-webkit-border-radius:4px;
-		-webkit-box-shadow :inset 0 1px 0 rgb(236, 255, 140), inset 0 -1px 3px rgb(151, 194, 53), 0 1px 3px #444;
-		-moz-border-radius:4px;
-		-moz-box-shadow :inset 0 1px 0 rgb(236, 255, 140), inset 0 -1px 3px rgb(151, 194, 53), 0 1px 3px #444;
-		color:#fff;
-		font-weight:400;
-		font-size:1.1em;
-		text-shadow:0 -1px 0 rgba(0,0,0,0.2);}
-
-	.form-controls button.minor {
-		background: rgb(210,210,210);
-		color:#555;
-		text-shadow:none;
-		box-shadow :inset 0 1px 0 rgb(230, 230, 230), inset 0 -1px 3px rgb(140, 140, 140), 0 1px 3px #444;
-		-webkit-border-radius:4px;
-		-webkit-box-shadow :inset 0 1px 0 rgb(230, 230, 230), inset 0 -1px 3px rgb(140, 140, 140), 0 1px 3px #444;
-		-moz-border-radius:4px;
-		-moz-box-shadow :inset 0 1px 0 rgb(230, 230, 230), inset 0 -1px 3px rgb(140, 140, 140), 0 1px 3px #444;}
-
 .field p.error {
 	display:block;
 	margin:0 0 0 10px;
@@ -1068,4 +954,98 @@ nav.navbar.navbar-fixed-top {
 }
 .navbar-toggle > span {
     background-color: #79ac00;
+}
+.block {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin: 10px;
+    height: 100%;
+}
+.row_equal_height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+@media (max-width: 768px) {
+.row_equal_height {
+  display: block;
+}
+}
+
+
+#wrapper .block a.btn.btn-primary.btn-lg {
+    background-color: white;
+    box-shadow: none;
+    color: #78ac00;
+    font-weight: bolder;
+    padding-left:0px;
+    margin-left:0px;
+    padding: 0px;
+    margin-bottom:15px;
+}
+#wrapper .block a.btn.btn-primary.btn-lg:hover {
+    background-color: white;
+    box-shadow: none;
+    color: #3c3b39;
+    font-weight: bolder;
+    top:0px;
+    transform: none;
+    transition: 0ms all ease;
+}
+.navbar-nav li a {
+    height: 66px;
+    line-height: 33px;
+}
+@media(max-width:767px){
+#navbar.navbar-collapse.collapse.in .navbar-nav {
+    margin-left: -15px;
+}
+}
+#navbar.navbar-collapse.collapse .navbar-nav {
+    margin-left: 20px;
+}
+
+.navbar-nav li a.active {
+    background-color: #99cc33;
+    color: white;
+}
+
+#wrapper footer h3 {
+    color: #373737;
+}
+#main {
+    margin-top: 67px;
+    padding-bottom:40px;
+    background-color:#f6f6f6;
+}
+.btn.btn-primary {
+    background-color:#79ac00;
+    background-image: none;
+    border:#7a7a7a;
+    color:white;
+    transition: all 300ms ease;
+    border-radius: 2px;
+}
+a.btn.btn-primary {
+    background-color:#fff;
+}
+a.btn.btn-primary:hover {
+    background-color:#3c3b39;
+}
+.btn.btn-primary:hover {
+    color: white;
+}
+.btn.btn-primary:active {
+    background-color:#79ac00;
+    background-image: none;
+    border:#7a7a7a;
+    color:white;
+}
+.CodeMirror-gutter-text pre {
+    color: #99cc33;
+}
+.CodeMirror-gutter-text pre:nth-child(2n) {
+    color: #6d9320;
 }
