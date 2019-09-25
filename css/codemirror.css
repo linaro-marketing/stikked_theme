@@ -129,8 +129,9 @@ blockquote.CodeMirror ol {
   word-wrap: normal;
   line-height: inherit;
   color: inherit;
+  width: 100%;
+  overflow: inherit;
 }
-
 .CodeMirror-wrap pre {
   word-wrap: break-word;
   white-space: pre-wrap;
