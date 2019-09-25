@@ -12,7 +12,6 @@ $page_title .= $this->config->item('site_name');
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <title><?php echo $page_title; ?></title>
-        <link href="https://www.linaro.org/assets/css/main.css" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <?php
 
