@@ -6,11 +6,11 @@
 
 <section>
 	<div class="row">
+        <div class="container">
 		<div class="span12">
 			<div class="page-header">
 				<h1 class="pagetitle right"><?php echo $title; ?></h1>
 			</div>
-			<div class="row">
 				<div class="span12">
 					<div class="detail by">By <?php echo $name; ?>, <?php $p = explode(',', timespan($created, time())); echo $p[0]?> ago, written in <?php echo $lang; ?>.</div>
 					<?php if(isset($inreply)){?><div class="detail by">This paste is a reply to <a href="<?php echo $inreply['url']?>"><?php echo $inreply['title']; ?></a> by <?php echo $inreply['name']; ?></div><?php }?>
@@ -20,17 +20,19 @@
 					<?php }?>
 					<div class="detail"><span class="item">Embed </span><input id="embed_field" type="text" value="<?php echo htmlspecialchars('<iframe src="' . site_url('view/embed/' . $pid) . '" style="border:none;width:100%"></iframe>'); ?>" /></div>
 					<div class="detail"><a class="control" href="<?php echo site_url("view/download/".$pid); ?>">Download Paste</a> or <a class="control" href="<?php echo site_url("view/raw/".$pid); ?>">View Raw</a> <!--&mdash; <a href="#" class="expand control">Expand paste</a> to full width of browser</div> z-->
-				</div>
-			</div>
-		</div>
+                </div>
+        </div>
+    </div>
 	</div>
 </section>
 
 <section>
 	<div class="row">
+        <div class="container">
 		<div class="span12">
 			<blockquote class="CodeMirror"><?php echo $paste; ?></blockquote>
-		</div>
+        </div>
+        </div>
 	</div>
 </section>
 <section>

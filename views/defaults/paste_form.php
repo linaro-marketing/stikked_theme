@@ -40,7 +40,7 @@
                 <div class="form-group">
                     <label for="title" class="col-sm-2 control-label">Title</label>
                     <div class="col-sm-10">
-                    <input value="<?php if(isset($title_set)){ echo $title_set; }?>" class="span3 form-control" type="text" id="title" name="title" tabindex="2" maxlength="32" />
+                    <input value="<?php if(isset($title_set)){ echo $title_set; }?>" class="span3 form-control" type="text" id="title" name="title" tabindex="2" maxlength="50" />
                     </div>
                 </div>
                 <div class="form-group">
