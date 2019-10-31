@@ -30,7 +30,7 @@
 	<div class="row">
         <div class="container">
 		<div class="span12">
-			<blockquote class="CodeMirror"><?php echo $paste; ?></blockquote>
+            <textarea class="CodeMirror" id="outputCode"><?php echo $raw; ?></textarea>
         </div>
         </div>
 	</div>
