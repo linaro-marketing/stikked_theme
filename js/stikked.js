@@ -30,19 +30,22 @@ ST.show_embed = function() {
 
 $(document).ready(function() {
 	ST.init();
-    function setupEditor(elementId) {
-        modes = $.parseJSON($("#codemirror_modes").text());
-        var codeMirrorOptions = {
-          mode: "scheme",
-          lineNumbers: true,
-          matchBrackets: true,
-          tabMode: "indent",
-          viewportMargin: Infinity
-        };
-        return CodeMirror.fromTextArea(
-            document.getElementById(elementId),
-            codeMirrorOptions
-        );
+    function setupEditor(elementId, readOnly=false) {
+      modes = $.parseJSON($("#codemirror_modes").text());
+      var codeMirrorOptions = {
+        mode: "scheme",
+        lineNumbers: true,
+        matchBrackets: true,
+        tabMode: "indent",
+        viewportMargin: Infinity
+      };
+      if(readOnly == true){
+        codeMirrorOptions["readOnly"] = "nocursor";
+      }
+      return CodeMirror.fromTextArea(
+        document.getElementById(elementId),
+        codeMirrorOptions
+      );
     }
 
     set_syntax = function(mode, editor) {
@@ -67,7 +70,7 @@ $(document).ready(function() {
     };
     var outputCode = $("#outputCode");
     if(outputCode.length > 0){
-        var outputCodeEditor = setupEditor("outputCode");
+        var outputCodeEditor = setupEditor("outputCode", readOnly=true);
         set_language(outputCodeEditor);
 
     }
