@@ -35,7 +35,7 @@
         </div>
 	</div>
 </section>
-<section>
+<section class="inputCodeSection">
 <?php
 
 function checkNum($num){
