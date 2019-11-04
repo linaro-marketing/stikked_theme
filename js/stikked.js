@@ -32,14 +32,16 @@ $(document).ready(function() {
 	ST.init();
     function setupEditor(elementId) {
         modes = $.parseJSON($("#codemirror_modes").text());
+        var codeMirrorOptions = {
+          mode: "scheme",
+          lineNumbers: true,
+          matchBrackets: true,
+          tabMode: "indent",
+          viewportMargin: Infinity
+        };
         return CodeMirror.fromTextArea(
             document.getElementById(elementId),
-            {
-            mode: "scheme",
-            lineNumbers: true,
-            matchBrackets: true,
-            tabMode: "indent"
-            }
+            codeMirrorOptions
         );
     }
 
