@@ -26,7 +26,7 @@
 	</div>
 </section>
 
-<section>
+<section class="outputCodeSection">
 	<div class="row">
         <div class="container">
 		<div class="span12">
