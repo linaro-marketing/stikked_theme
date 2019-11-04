@@ -1056,3 +1056,6 @@ a.btn.btn-primary:hover {
 .outputCodeSection {
     margin-bottom:0px;
 }
+.paste_code_form_group{
+    margin-bottom:-10px;
+}

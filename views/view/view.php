@@ -4,38 +4,32 @@
 	echo $insert;
 }?>
 
-<section>
-	<div class="row">
-        <div class="container">
-		<div class="span12">
-			<div class="page-header">
-				<h1 class="pagetitle right"><?php echo $title; ?></h1>
-			</div>
-				<div class="span12">
-					<div class="detail by">By <?php echo $name; ?>, <?php $p = explode(',', timespan($created, time())); echo $p[0]?> ago, written in <?php echo $lang; ?>.</div>
-					<?php if(isset($inreply)){?><div class="detail by">This paste is a reply to <a href="<?php echo $inreply['url']?>"><?php echo $inreply['title']; ?></a> by <?php echo $inreply['name']; ?></div><?php }?>
-					<div class="detail"><span class="item">URL </span><a href="<?php echo $url; ?>"><?php echo $url; ?></a></div>
-					<?php if(!empty($snipurl)){?>
-						<div class="detail"><div class="item">Shorturl </div><a href="<?php echo $snipurl; ?>"><?php echo htmlspecialchars($snipurl) ?></a></div>
-					<?php }?>
-					<div class="detail"><span class="item">Embed </span><input id="embed_field" type="text" value="<?php echo htmlspecialchars('<iframe src="' . site_url('view/embed/' . $pid) . '" style="border:none;width:100%"></iframe>'); ?>" /></div>
-					<div class="detail"><a class="control" href="<?php echo site_url("view/download/".$pid); ?>">Download Paste</a> or <a class="control" href="<?php echo site_url("view/raw/".$pid); ?>">View Raw</a> <!--&mdash; <a href="#" class="expand control">Expand paste</a> to full width of browser</div> z-->
-                </div>
-        </div>
-    </div>
-	</div>
-</section>
-
 <section class="outputCodeSection">
 	<div class="row">
         <div class="container">
 		<div class="span12">
+            <div class="page-header">
+				<h1 class="pagetitle right"><?php echo $title; ?></h1>
+			</div>
+            <div class="detail by">By <strong><?php echo $name; ?></strong>, <?php $p = explode(',', timespan($created, time())); echo $p[0]?> ago, written in <em><?php echo $lang; ?></em>.</div>
+					<?php if(isset($inreply)){?><div class="detail by">This paste is a reply to <a href="<?php echo $inreply['url']?>"><?php echo $inreply['title']; ?></a> by <?php echo $inreply['name']; ?></div><?php }?>
+					<?php if(!empty($snipurl)){?>
+						<div class="detail"><div class="item">Shorturl </div><a href="<?php echo $snipurl; ?>"><?php echo htmlspecialchars($snipurl) ?></a></div>
+					<?php }?>
             <textarea class="CodeMirror" id="outputCode"><?php echo $raw; ?></textarea>
+            <div class="detail">
+                <a class="control" href="<?php echo site_url("view/download/".$pid); ?>">Download Paste</a> or <a class="control" href="<?php echo site_url("view/raw/".$pid); ?>">View Raw</a> <!--&mdash; <a href="#" class="expand control">Expand paste</a> to full width of browser</div> z-->
+                <span class="divider">/</span>
+                <span class="item">Embed </span>
+                <input id="embed_field" type="text" value="<?php echo htmlspecialchars('<iframe src="' . site_url('view/embed/' . $pid) . '" style="border:none;width:100%"></iframe>'); ?>" />
+                <span class="divider">/</span>
+                <span class="item">URL </span><a href="<?php echo $url; ?>"><?php echo $url; ?></a>
+            </div>
         </div>
         </div>
 	</div>
 </section>
-<section>
+<section class="inputCodeSection">
 <?php
 
 function checkNum($num){
