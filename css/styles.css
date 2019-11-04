@@ -1053,3 +1053,6 @@ a.btn.btn-primary:hover {
     height: auto !important;
     max-height: 400px;
 }
+.outputCodeSection {
+    margin-bottom:0px;
+}
