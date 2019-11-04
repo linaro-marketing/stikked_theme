@@ -88,7 +88,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group paste_code_form_group">
                     <label for="lang" class="col-xs-12 control-label">Paste your snippet here</label>
                     <div class="col-xs-12">
                         <div class="control-group">
